@@ -1,0 +1,61 @@
+/* Header */
+
+.main-header{
+    display: flex;
+    padding: 0 3.125em;
+    background-color: var(--clr-header-footer);
+}
+
+.main-header>*{
+    background-color: var(--clr-header-footer);
+}
+
+.logo{
+    background-image: url("/DESIGN/LOGO/LOGO.png");
+    align-self: center;
+    width: 8.3125rem;
+    height: 1.1578rem;
+
+}
+
+.main-header ul{
+    background-color: inherit
+}
+
+.main-header ul li{
+    background-color: inherit;
+    align-self: center;
+    color: rgb(185 183 183);
+}
+
+
+.main-header ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.125rem;
+    padding: 0 0.9375em;
+    background-color: var(--clr-header-footer);
+    color: #ffff;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--clr-header-footer);
+    height: 12.9375em;
+    border: #040a2c solid 1px;
+}
+
+footer>*{
+    background-color: var(--clr-header-footer);
+    color: #ffff;
+}
+
+footer small{
+
+    margin-top: 1em;
+    font-weight: 400;
+    font-family: "Montserrat - Thin";
+
+}
