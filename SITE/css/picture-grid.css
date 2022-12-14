@@ -1,0 +1,13 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
+    grid-auto-flow: dense;
+    gap: 10px;
+}
+
+.grid-img:hover{
+    opacity: 1
+}
+
+
+

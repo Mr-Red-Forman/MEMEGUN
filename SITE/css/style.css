@@ -1,5 +1,7 @@
 @import "/SITE/css/footer-header.css";
 
+@import "/SITE/css/picture-grid.css";
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -38,6 +40,7 @@
 }
 
 
+
 /* basics */
 
 html{
@@ -73,11 +76,57 @@ a, a:hover{
 
 /* search bar */
 
+.search-option{
+    height: 6.25em;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+}
+.serach-text{
+    border-bottom: #040a2c 2px solid;
+    width: fit-content;
+    padding: 5px;
+    margin-right: 9.1875em;
+}
+
+.serach-text img{
+    width: 1em;
+    height: 1em;
+    margin-left:3.125em ;
+}
+
+#inputText::placeholder{
+    font-size: 19px;
+}
+
+input{
+    font-size: 1em;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
 
 
+.fast-search{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:4em 0 0 0 0;
+    /* grid-template-rows:  4em ;
+    grid-auto-flow: dense; */
+    overflow: hidden;
+}
 
 
-
+.keyWords{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    font-size: 1em;
+}
 
 
 
@@ -88,7 +137,7 @@ a, a:hover{
 }
 
 .flex.justify-content{
-    justify-content:center
+    justify-content:center;
 }
 
 .flex.align-items{

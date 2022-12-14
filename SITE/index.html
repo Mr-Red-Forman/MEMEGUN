@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>MEMEgUn</title>
 </head>
-<body class="main-layout">
+<body class="main-layout" onload="onInit()">
 
     <header class="main-header flex space-between align-center justify-content">
         <img class="logo" src="/DESIGN/LOGO/LOGO.png" alt="MEMEGUN LOGO">
@@ -19,15 +19,18 @@
             </ul>
         </nav>
     </header>
-    <section class="search-option flex space-between align-center  ">
-        <div class="search-name"> <input type="text" id="txt-search" name="txt-search"
-            placeholder="what is cool?" >4545</div>
-        <div class="fast-search">4545</div>
+    <section class="search-option flex space-between align-center justify-content">
+        <form class="serach-text">
+            <input type="text" id="inputText" name="inputText" placeholder="Enter search keyword"  onkeyup="onTextFinder(this.value)">
+            <img src="/DESIGN/ICONS/search-icon.png">
+        </form>
+        <div class="fast-search"></div>
+        <div onclick=increaseGridOfWord() class="moreOption">more...</div>
     </section>
 
     <div class="meme-galleray">
         <section class="grid-container">
-            <img src="#" alt="pic">
+            <!-- <img data-imgID="001" onclick="onImgClick(this)" src="/DOC/meme-imgs (square)/1.jpg" alt=""> -->
         </section>
 
     </div>
@@ -39,6 +42,7 @@
         height="750"
         style="outline: 1px solid green"
         >
+    
 
         </canvas>
     </div>
@@ -57,6 +61,11 @@
         <img class="logo" src="/DESIGN/LOGO/LOGO.png" alt="MEMEGUN LOGO">
         <small>all rights reserved 2022</small>
     </footer>
-    
+
+    <script src="/SITE/js/utils.js"></script>
+    <script src="/SITE/js/storge-servise.js"></script>
+    <script src="/SITE/js/memeService.js"></script>
+    <script src="/SITE/js/memeImgGrid.js"></script>
+    <script src="/SITE/js/memeControler.js"></script>
 </body>
 </html>
