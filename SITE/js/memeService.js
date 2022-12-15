@@ -8,18 +8,18 @@ const IMGS='imgs'
 const keywords=['Trump', 'Cat', 'Dog', 'Snake', 'Rat', 'Sunrise', 'Monopolly','NYS','TLV','Friends',
 'Army', 'Queen']
 
-
-function textFinder(txt){
-    txt=txt.toLowerCase()
-    const kWord=getKeywords()
-    let words=Object.keys(kWord).map(word=>{
-        return word.toLowerCase()})
-    let retWord=words.filter(word=> word.startsWith(txt))
-    words=retWord.map(word=>{
-        return word[0].toUpperCase() + word.slice(1).toLowerCase()})
-    // return words
+// NOT RELEVENT FOR NOW
+// function textFinder(txt){
+//     txt=txt.toLowerCase()
+//     const kWord=getKeywords()
+//     let words=Object.keys(kWord).map(word=>{
+//         return word.toLowerCase()})
+//     let retWord=words.filter(word=> word.startsWith(txt))
+//     words=retWord.map(word=>{
+//         return word[0].toUpperCase() + word.slice(1).toLowerCase()})
+//     // return words
     
-}
+// }
 
 
 function getImgs(){

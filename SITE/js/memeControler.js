@@ -5,6 +5,7 @@ function onInit(){
 
     // randerFastSearch() 
     renderImg()
+    initCanvas()
 }
 
 

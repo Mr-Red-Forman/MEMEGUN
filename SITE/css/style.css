@@ -1,6 +1,7 @@
 @import "/SITE/css/footer-header.css";
 
 @import "/SITE/css/picture-grid.css";
+@import "/SITE/css/canvas-screen.css";
 
 *{
     box-sizing: border-box;

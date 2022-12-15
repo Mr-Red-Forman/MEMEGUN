@@ -5,9 +5,8 @@
     gap: 10px;
 }
 
-.grid-img:hover{
-    opacity: 1
+.grid-container.canvasOpen{
+    display: none;
 }
-
 
 

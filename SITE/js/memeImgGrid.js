@@ -1,36 +1,45 @@
 'use strict'
 
-function renderImg(){
-    const imgs=getImgs() 
-    let strHTML=imgs.map(img=>`
-    <img  class= "grid-Img imgid${img.id}" data-imgID="${img.id}" onclick="onImgClick(this)" onmouseover="onImgHover(this)"
-    onmouseout=onMouseOut() src=${img.url} alt="${imgs.keywords}">
+function renderImg() {
+    const imgs = getImgs()
+    let strHTML = imgs.map(img => `
+    <img  class= "grid-Img imgid${img.id}" data-imgID="${img.id}"
+     src=${img.url} alt="${imgs.keywords}">
     `
     )
-    console.log('strHTML:', strHTML)
 
-    document.querySelector(".grid-container").innerHTML=strHTML.join('')
+    document.querySelector(".grid-container").innerHTML = strHTML.join('')
+
+
+    addEventClick()
+    addEventHover()
+}
+
+function addEventClick() {
+
+    const imgs = document.querySelectorAll('.grid-Img')
+    imgs.forEach(img => {
+        img.addEventListener('click', () => onClickImg());
+    });
+}
+
+
+function addEventHover() {
+
+    const imgs = document.querySelectorAll('.grid-Img')
+    imgs.forEach(img => {
+        img.addEventListener('mouseenter', () => onHoverImg());
+    });
 
 }
 
-function onImgClick(img){
-   console.log('click', img)
-    
+function onClickImg() {
+    const gridCont=document.querySelector(".grid-container")
+    gridCont.classList.toggle("canvasOpen")
+    const canvasCont=document.querySelector(".canvas-container")
+    canvasCont.classList.toggle("canvasOpen")
 }
 
-function onImgHover(img){
-    const imgNumber=img.dataset.imgid
-    const item=document.querySelector(`.imgid${imgNumber}`)
-    item.classList.add("info")
-    item.addEventListener('mouseout',onMouseOut(imgNumber))
-}
-
-function onMouseOut(imgNumber){
-    console.log('imgNumber:', imgNumber)
-    const item=document.querySelector(`.imgid${imgNumber}`)
-    item.classList.remove("info")
-    console.log('item:', document.querySelector(`.imgid${imgNumber}`))
-
-
+function onHoverImg() {
 
 }

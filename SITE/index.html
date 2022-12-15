@@ -30,21 +30,41 @@
 
     <div class="meme-galleray">
         <section class="grid-container">
-            <!-- <img data-imgID="001" onclick="onImgClick(this)" src="/DOC/meme-imgs (square)/1.jpg" alt=""> -->
         </section>
 
     </div>
 
-    <div hidden class="canvas-container">
-        <canvas
-        id="main-canvas"
-        width="900"
-        height="750"
-        style="outline: 1px solid green"
-        >
-    
-
-        </canvas>
+    <div class="canvas-container">
+            <section class="controlButs">
+                <input id="textAdd" type="text">
+                <img id='switchRow' src="#" alt="addRow">
+                <img id='addRow' src="#" alt="addRow">
+                <img id='trash' src="#" alt="trash">
+                <img id='increasFont' src="#" alt="increasFont">
+                <img id='decreFont' src="#" alt="decreFont">
+                <img id='alignLeft' src="#" alt="alignLeft">
+                <img id='alignCenter' src="#" alt="alignCenter">
+                <img id='alignRigth' src="#" alt="alignCenter">
+                <img id='impact' src="#" alt="impact">
+                <img id='impactCol' src="#" alt="impactCol">
+                <img id='fontCol' src="#" alt="fontCol">
+                <div class="imojiCont">
+                    <img id="leftArrow" src="" alt="leftArrow">
+                    <img id="leftEmoji" src="" alt="leftEmoji">
+                    <img id="centerEmoji" src="" alt="centerEmoji">
+                    <img id="rightArrow" src="" alt="rightArrow">
+                </div>
+                <img id="shearCanvas" src="" alt="shearCanvas">
+            </section>
+            <section class="paintCanvas">
+                <canvas
+                class="main-canvas"
+                width="900"
+                height="750"
+                style="outline: 1px solid green"
+                >
+                </canvas>
+            </section>
     </div>
 
     <section class="coontac-opstion">
@@ -64,8 +84,11 @@
 
     <script src="/SITE/js/utils.js"></script>
     <script src="/SITE/js/storge-servise.js"></script>
+    <!-- <script src="/SITE/js/canvasControler.js"></script> -->
     <script src="/SITE/js/memeService.js"></script>
-    <script src="/SITE/js/memeImgGrid.js"></script>
-    <script src="/SITE/js/memeControler.js"></script>
+    <!-- <script src="/SITE/js/memeImgGrid.js"></script>
+    <script src="/SITE/js/memeControler.js"></script> -->
+    <script src="/SITE/js/mainControler.js"></script>
+
 </body>
 </html>
