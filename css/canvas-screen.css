@@ -22,8 +22,8 @@
     display: grid;
 
     grid-template-columns: repeat(5, 3.75em);
-    grid-template-rows: repeat(6, 3.75em);
-    gap: 1.4545em;
+    grid-template-rows: repeat(7, 3.75em);
+    gap: 0.625em;
     background-color: aqua;
     align-content: center;
     justify-content: center;
@@ -36,6 +36,16 @@
     border: 1px solid blue;
     width: 100%;
     height: 100%;
+}
+
+.controlButs>*{
+    border-radius: 15%;
+    padding: 1em;
+    align-items: center;   
+}
+
+.imojiCont>*{
+    font-size: 2em;
 }
 
 #textAdd{
@@ -62,26 +72,42 @@
     grid-area: 3/2/4/3;
 }
 #alignLeft{
-    grid-area: 3/3/4/4;
+    grid-area: 3/5/4/6;
 }
 #alignCenter{
     grid-area: 3/4/4/5;
 }
 #alignRigth{
-    grid-area: 3/5/4/6;
+    grid-area: 3/3/4/4;
 }
 
-#impact{
-    grid-area: 4/1/5/3;
-}
 #impact{
     grid-area: 4/1/5/4;
 }
 #impactCol{
     grid-area: 4/4/5/5;
 }
+
+#impact-pelleta{
+    grid-area: 4/4/5/5;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+}
+
+
 #fontCol{
     grid-area: 4/5/5/6;
+}
+
+#font-pelleta{
+    grid-area: 4/5/5/6;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
 .imojiCont{
     grid-area: 5/1/7/-1;
@@ -92,6 +118,8 @@
 #shearCanvas{
     grid-area: -2/-3/-1/-1;
 }
+
+
 
 
 

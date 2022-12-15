@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>MEMEgUn</title>
 </head>
 <body class="main-layout" onload="onInit()">
@@ -36,23 +36,29 @@
 
     <div class="canvas-container">
             <section class="controlButs">
-                <input id="textAdd" type="text" placeholder="Enter search keyword">
-                <img id='switchRow' src="/DESIGN/ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="addRow">
-                <img id='addRow' src="/DESIGN/ICONS/add.png" alt="addRow">
-                <img id='trash' src="/DESIGN/ICONS/trash.png" alt="trash">
-                <img id='increasFont' src="/DESIGN/ICONS/increase font - icon.png" alt="increasFont">
-                <img id='decreFont' src="/DESIGN/ICONS/decrease font - icon.png" alt="decreFont">
-                <img id='alignLeft' src="/DESIGN/ICONS/align-to-left.png" alt="alignLeft">
-                <img id='alignCenter' src="/DESIGN/ICONS/center-text-alignment.png" alt="alignCenter">
-                <img id='alignRigth' src="/DESIGN/ICONS/align-to-right.png" alt="alignCenter">
+                <input id="textAdd" type="text" placeholder="Enter search keyword" onkeyup="onTypeMeme(this.value)">
+                <img id='switchRow' src="/DESIGN/ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="addRow" onclick="onChangeRow()">
+                <img id='addRow' src="/DESIGN/ICONS/add.png" alt="addRow" onclick="onAddRow()" >
+                <img id='trash' src="/DESIGN/ICONS/trash.png" alt="trash" onclick="onTrash()">
+                <img id='increasFont' src="/DESIGN/ICONS/increase font - icon.png" alt="increasFont" onclick="onCanvasFuncion('size', 4)">
+                <img id='decreFont' src="/DESIGN/ICONS/decrease font - icon.png" alt="decreFont" onclick="onCanvasFuncion('size', -4)">
+                <img id='alignRigth' src="/DESIGN/ICONS/align-to-left.png" alt="alignCenter" onclick="onCanvasFuncion('align','right')">
+                <img id='alignCenter' src="/DESIGN/ICONS/center-text-alignment.png" alt="alignCenter" onclick="onCanvasFuncion('align','center')">
+                <img id='alignLeft' src="/DESIGN/ICONS/align-to-right.png" alt="alignLeft" onclick="onCanvasFuncion('align', 'left')">
                 <img id='impact' src="#" alt="impact">
                 <img id='impactCol' src="/DESIGN/ICONS/text stroke.png" alt="impactCol">
+                <input type="color"  id="impact-pelleta" name="head value="#e66465" onchange="onCanvasFuncion('strokColor',this.value)">
                 <img id='fontCol' src="/DESIGN/ICONS/paint-board-and-brush.png" alt="fontCol">
+                <input type="color"  id="font-pelleta" name="head value="#e66465" onchange="onCanvasFuncion('color',this.value)">
                 <div class="imojiCont">
-                    <img id="leftArrow" src="/DESIGN/ICONS/left arrow.png" alt="leftArrow">
-                    <img id="leftEmoji" src="" alt="leftEmoji">
-                    <img id="centerEmoji" src="" alt="centerEmoji">
-                    <img id="rightArrow" src="/DESIGN/ICONS/rigth arrow.png" alt="rightArrow">
+                    <!-- <img id="leftArrow" src="" alt="leftArrow"> -->
+                    <h1 id="centerEmoji"><</h1>
+                    <h1 id=centerEmoji">❤️</h1>
+                    <h1 id=centerEmoji">❤️</h1>
+                    <h1 id=rigthEmoji">❤️</h1>
+                    <!-- <img id="rigthEmoji" src="" alt="centerEmoji"> -->
+                    <h1 id="rigthArrow">></h1>
+                    
                 </div>
                 <button id="shearCanvas">share</button>
             </section>
@@ -82,13 +88,13 @@
         <small>all rights reserved 2022</small>
     </footer>
 
-    <script src="/SITE/js/utils.js"></script>
-    <script src="/SITE/js/storge-servise.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/storge-servise.js"></script>
     <!-- <script src="/SITE/js/canvasControler.js"></script> -->
-    <script src="/SITE/js/memeService.js"></script>
+    <script src="/js/memeService.js"></script>
     <!-- <script src="/SITE/js/memeImgGrid.js"></script>
     <script src="/SITE/js/memeControler.js"></script> -->
-    <script src="/SITE/js/mainControler.js"></script>
+    <script src="/js/mainControler.js"></script>
 
 </body>
 </html>
