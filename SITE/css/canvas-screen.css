@@ -8,24 +8,90 @@
     display: grid;
     /* position: relative; */
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:400px;
+    height: 650px;
+    background-color: #e3e3e3;
+    padding: 1.625em 3.125em;
+
 
 }
+
+
 
 .controlButs{
     grid-area: 1/2/3/3;
     display: grid;
-    grid-template-columns: repeat(6, 3.75em);
-    grid-auto-rows: 3.75em;
+
+    grid-template-columns: repeat(5, 3.75em);
+    grid-template-rows: repeat(6, 3.75em);
+    gap: 1.4545em;
     background-color: aqua;
+    align-content: center;
+    justify-content: center;
 
 }
 
 .paintCanvas{
     grid-area: 1/1/3/2;
-    padding: 20px;
+    background-color: bisque;
+    border: 1px solid blue;
+    width: 100%;
+    height: 100%;
 }
 
+#textAdd{
+    grid-area: 1/1/2/-1;
+}
+
+#switchRow{
+    grid-area: 2/2/3/3;
+
+}
+
+#addRow{
+    grid-area: 2/3/3/4;
+}
+#trash{
+    grid-area: 2/4/3/5;
+}
+
+
+#increasFont{
+    grid-area: 3/1/4/2;
+}
+#decreFont{
+    grid-area: 3/2/4/3;
+}
+#alignLeft{
+    grid-area: 3/3/4/4;
+}
+#alignCenter{
+    grid-area: 3/4/4/5;
+}
+#alignRigth{
+    grid-area: 3/5/4/6;
+}
+
+#impact{
+    grid-area: 4/1/5/3;
+}
+#impact{
+    grid-area: 4/1/5/4;
+}
+#impactCol{
+    grid-area: 4/4/5/5;
+}
+#fontCol{
+    grid-area: 4/5/5/6;
+}
+.imojiCont{
+    grid-area: 5/1/7/-1;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+#shearCanvas{
+    grid-area: -2/-3/-1/-1;
+}
 
 
 

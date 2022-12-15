@@ -44,7 +44,7 @@ function onClickImg(event) {
     canvasCont.classList.toggle("canvasOpen")
     resizeCanvas()
 
-    drawImg(event)
+    chosenImg(event)
     
 }
 
@@ -58,6 +58,7 @@ function onHoverImg() {
 
 let gElCanvas
 let gCtx
+let gImgScr=""
 
 function initCanvas(){
     gElCanvas=document.querySelector(".main-canvas")
@@ -92,26 +93,28 @@ function renderCanvas() {
 }
 
 function resizeCanvas() {
-    const elContainer = document.querySelector('.paintCanvas')
-    gElCanvas.width = elContainer.offsetWidth
+    const elContainer = document.querySelector('.canvas-container')
+
+    gElCanvas.width = elContainer.offsetWidth/2
     gElCanvas.height = elContainer.offsetHeight
+
+    
     renderCanvas()
+    if (gImgScr) {drowImg()}
+   
 }
 
-function drawImg(ev,onImageReady) {
-    const imgNum= ev.target.dataset.imgid
-    const elImg = new Image() // Create a new html img element
-    elImg.src = `/DOC/meme-imgs (square)/${imgNum}.jpg`// Send a network req to get that image, define the img src
-    // console.log('elImg:', elImg)
-    // // setTimeout(() => {
-    // //     gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
-    // // }, 10);
-    // // When the image ready draw it on the canvas
+function chosenImg(ev) {
+    gImgScr= ev.target.dataset.imgid
+    drowImg()
+    
+}
+
+function drowImg(){
+    const elImg = new Image()
+    elImg.src= `/DOC/meme-imgs (square)/${gImgScr}.jpg`
+
     elImg.onload = () => {
-        console.log('gElCanvas.width:',gElCanvas.width )
         gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
     }
-
 }
-
-
