@@ -1,0 +1,100 @@
+@font-face {
+    font-family: fa;
+    src: url("/DESIGN/Fonts/font-awesome/fa-brands-400.ttf");
+}
+
+/* font awsome */
+
+.fa::before {
+    font-family: fa;
+}
+
+.fa.facebook::before {
+    content: "\f39e";
+}
+
+.fa.twitter::before {
+    content: "\f099";
+}
+.fa.linkedin::before {
+    content: "\f0e1";
+}
+
+
+.aboutSec{
+    display: flex;
+    margin: 0 9.625em;
+    margin-top:4.8125em ;
+    margin-bottom:10.4375em ;
+    justify-content: center;
+    align-items: center; 
+    max-height: 23.75em; 
+}
+
+.aboutImg{
+    position: relative;
+    border-radius: 50%;
+    max-width:20.125rem;
+    max-height: 23.75em;
+    width: 90%; 
+    height: inherit;
+    aspect-ratio: 1/1;
+    flex-shrink: 2;
+}
+
+.wordAndContact{
+    margin-left:2.5em ;
+    text-align: start;
+}
+.wordAndContact article{
+    margin-bottom:3.5em ;
+}
+
+
+
+.wordAndContact h1{
+    font-size: 700;
+    font-size: 1.3157em;
+}
+.social-madia li{
+    display: flex;
+    /* background-color: var(--clr-header-footer); */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.social-madia a {
+    width: 40px; 
+    height: 40px;
+    /* /* align-items: center; */
+    justify-content: center;
+    background-color: var(--clr-header-footer);
+    font-size: 1.6875em;
+    margin-right:0.5625em ;
+    color: #ffff;
+    text-decoration: none; 
+    border-radius: 25%;
+
+}
+
+
+@media (max-width: 1060px) {
+
+    .aboutImg{
+        /* max-width:60%; */
+        padding: 2em;
+    }
+
+    .aboutSec{
+        margin-top:4.8125em ;
+        margin-bottom:10.4375em ;
+
+    }
+
+}
+
+
+

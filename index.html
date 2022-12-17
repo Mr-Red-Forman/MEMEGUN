@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>MEMEgUn</title>
 </head>
 <body class="main-layout" onload="onInit()">
 
     <header class="main-header flex space-between align-center justify-content">
-        <img class="logo" src="/DESIGN/LOGO/LOGO.png" alt="MEMEGUN LOGO">
+        <img class="logo" src="DESIGN/LOGO/LOGO.png" alt="MEMEGUN LOGO">
         <nav class="main-nav">
             <ul class="flex clean-list space-between align-center justify-content">
                 <li> <a href="#">Gallery</a></li>
@@ -22,10 +23,12 @@
     <section class="search-option flex space-between align-center justify-content">
         <form class="serach-text">
             <input type="text" id="inputText" name="inputText" placeholder="Enter search keyword"  onkeyup="onTextFinder(this.value)">
-            <img src="/DESIGN/ICONS/search-icon.png">
+            <img src="DESIGN/ICONS/search-icon.png">
         </form>
-        <div class="fast-search"></div>
-        <div onclick=increaseGridOfWord() class="moreOption">more...</div>
+        <section class="searchWords flex align-center justify-content">
+            <div class="fast-search"></div>
+            <div onclick=increaseGridOfWord() class="moreOption">more...</div>
+        </section>
     </section>
 
     <div class="meme-galleray">
@@ -37,27 +40,33 @@
     <div class="canvas-container">
             <section class="controlButs">
                 <input id="textAdd" type="text" placeholder="Enter search keyword" onkeyup="onTypeMeme(this.value)">
-                <img id='switchRow' src="/DESIGN/ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="addRow" onclick="onChangeRow()">
-                <img id='addRow' src="/DESIGN/ICONS/add.png" alt="addRow" onclick="onAddRow()" >
-                <img id='trash' src="/DESIGN/ICONS/trash.png" alt="trash" onclick="onTrash()">
-                <img id='increasFont' src="/DESIGN/ICONS/increase font - icon.png" alt="increasFont" onclick="onCanvasFuncion('size', 4)">
-                <img id='decreFont' src="/DESIGN/ICONS/decrease font - icon.png" alt="decreFont" onclick="onCanvasFuncion('size', -4)">
-                <img id='alignRigth' src="/DESIGN/ICONS/align-to-left.png" alt="alignCenter" onclick="onCanvasFuncion('align','right')">
-                <img id='alignCenter' src="/DESIGN/ICONS/center-text-alignment.png" alt="alignCenter" onclick="onCanvasFuncion('align','center')">
-                <img id='alignLeft' src="/DESIGN/ICONS/align-to-right.png" alt="alignLeft" onclick="onCanvasFuncion('align', 'left')">
-                <img id='impact' src="#" alt="impact">
-                <img id='impactCol' src="/DESIGN/ICONS/text stroke.png" alt="impactCol">
+                <img id='switchRow' src="DESIGN/ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="addRow" onclick="onChangeRow()">
+                <img id='addRow' src="DESIGN/ICONS/add.png" alt="addRow" onclick="onAddRow()" >
+                <img id='trash' src="DESIGN/ICONS/trash.png" alt="trash" onclick="onTrash()">
+                <img id='increasFont' src="DESIGN/ICONS/increase font - icon.png" alt="increasFont" onclick="onCanvasFuncion('size', 4)">
+                <img id='decreFont' src="DESIGN/ICONS/decrease font - icon.png" alt="decreFont" onclick="onCanvasFuncion('size', -4)">
+                <img id='alignRigth' src="DESIGN/ICONS/align-to-left.png" alt="alignCenter" onclick="onCanvasFuncion('align','right')">
+                <img id='alignCenter' src="DESIGN/ICONS/center-text-alignment.png" alt="alignCenter" onclick="onCanvasFuncion('align','center')">
+                <img id='alignLeft' src="DESIGN/ICONS/align-to-right.png" alt="alignLeft" onclick="onCanvasFuncion('align', 'left')">
+                <select id='impact'>
+                    <option value="">Impact </option>
+                    <option value="Hot and peper">Hot and peper</option>
+                    <option value="Chill the winds">Chill the winds</option>
+                    <option value="Wake up">Wake up</option>
+                </select>
+                <!-- <img id='impactCol' src="DESIGN/ICONS/text stroke.png" alt="impactCol"> -->
+                <p id='impactCol'>A</p>
                 <input type="color"  id="impact-pelleta" name="head value="#e66465" onchange="onCanvasFuncion('strokColor',this.value)">
-                <img id='fontCol' src="/DESIGN/ICONS/paint-board-and-brush.png" alt="fontCol">
+                <img id='fontCol' src="DESIGN/ICONS/paint-board-and-brush.png" alt="fontCol">
                 <input type="color"  id="font-pelleta" name="head value="#e66465" onchange="onCanvasFuncion('color',this.value)">
                 <div class="imojiCont">
                     <!-- <img id="leftArrow" src="" alt="leftArrow"> -->
-                    <h1 id="centerEmoji"><</h1>
-                    <h1 id=centerEmoji">❤️</h1>
-                    <h1 id=centerEmoji">❤️</h1>
-                    <h1 id=rigthEmoji">❤️</h1>
+                    <h1 id="leftArrow" onclick="onEmojiSearch(1)"><</h1>
+                    <h1 id="leftEmoji" onclick=onAddEmoji(this)></h1>
+                    <h1 id="centerEmoji" onclick=onAddEmoji(this)></h1>
+                    <h1 id="rightEmoji" onclick=onAddEmoji(this)></h1>
                     <!-- <img id="rigthEmoji" src="" alt="centerEmoji"> -->
-                    <h1 id="rigthArrow">></h1>
+                    <h1 id="rightArrow" onclick="onEmojiSearch(-1)">></h1>
                     
                 </div>
                 <button id="shearCanvas">share</button>
@@ -67,34 +76,33 @@
                 class="main-canvas"
                 width="900"
                 height="750"
-                style="outline: 1px solid green"
                 >
                 </canvas>
             </section>
     </div>
 
-    <section class="coontac-opstion">
-        <img src="#" alt="self-pic">
-        <article> self story</article>
-        <nav class="social-madia">
-            <a href="">facebook</a>
-            <a href="">twitter</a>
-            <a href="">linkdin</a>
-        </nav>
+    <section class="aboutSec">
+        <img class="aboutImg" src="DOC/self Pic.webp" alt="self-pic">
+            <div class="wordAndContact">
+            <h1>Red Forman</h1>
+            <article> is a fictional character, one of the six main characters who appears on the American sitcom Friends (1994–2004). Created by David Crane and Marta Kauffman</article>
+            <ul class="social-madia clean-list flex align-items">
+                <li> <a href="" class="fa facebook"></a></li>
+                <li>  <a href="" class="fa twitter"></a></li>
+                <li>  <a href="" class="fa linkedin"></a></li>
+            </ul>
+        </div>
     </section>
 
     <footer class="flex align-center justify-content flex-direction">
-        <img class="logo" src="/DESIGN/LOGO/LOGO.png" alt="MEMEGUN LOGO">
+        <img class="logo" src="DESIGN/LOGO/LOGO.png" alt="MEMEGUN LOGO">
         <small>all rights reserved 2022</small>
     </footer>
 
-    <script src="/js/utils.js"></script>
-    <script src="/js/storge-servise.js"></script>
-    <!-- <script src="/SITE/js/canvasControler.js"></script> -->
-    <script src="/js/memeService.js"></script>
-    <!-- <script src="/SITE/js/memeImgGrid.js"></script>
-    <script src="/SITE/js/memeControler.js"></script> -->
-    <script src="/js/mainControler.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/storge-servise.js"></script>
+    <script src="js/memeService.js"></script>
+    <script src="js/mainControler.js"></script>
 
 </body>
 </html>
