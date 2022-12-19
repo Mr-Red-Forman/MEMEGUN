@@ -1,16 +1,16 @@
 /* layout */
-@import "./layout.css";
+@import "layout.css";
 
 /* vars */
-@import "./setup.css";
+@import "setup.css";
 
 /* helpers */
-@import "./helpers.css";
+@import "helpers.css";
 
 /* comp */
 
-@import "./footer-header.css";
-@import "./search-bar.css";
-@import "./img-grid.css";
-@import "./editor-meme.css";
-@import "./about-sec.css";
+@import "footer-header.css";
+@import "search-bar.css";
+@import "img-grid.css";
+@import "editor-meme.css";
+@import "about-sec.css";
