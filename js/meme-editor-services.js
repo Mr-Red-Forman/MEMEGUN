@@ -146,6 +146,7 @@ function changePos (imgId,pos){
     saveToStorage(MEMES, gMeme)
 }
 
+
 function isLineDrag(imgId){
     gMeme=loadFromStorage(MEMES)
     const gMemeIdx=gMeme.findIndex(img=>img.selectedImgId===imgId)
@@ -160,6 +161,15 @@ function getPreLocation(imgId){
     const yLoc=gMeme[gMemeIdx].lines[gMeme[gMemeIdx].selectedLineIdx].pos.y
     const loc={x:xLoc,y:yLoc}
     return loc
+}
+
+function moveCircle(imgId, pos) { 
+    const gMeme=loadFromStorage(MEMES)
+    const gMemeIdx=gMeme.findIndex(img=>img.selectedImgId===imgId)
+    console.log('gMeme[gMemeIdx].lines[gMeme[gMemeIdx].selectedLineIdx].pos.y:', gMeme[gMemeIdx].lines[gMeme[gMemeIdx].selectedLineIdx].pos.y)
+    gMeme[gMemeIdx].lines[gMeme[gMemeIdx].selectedLineIdx].pos.x += pos.x
+    gMeme[gMemeIdx].lines[gMeme[gMemeIdx].selectedLineIdx].pos.y += pos.y
+    saveToStorage(MEMES, gMeme)
 }
 
 function currentRow(imgId){

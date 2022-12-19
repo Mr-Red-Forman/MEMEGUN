@@ -133,15 +133,36 @@ function onAddEmoji(emoji) {
     renderCanvas()
 }
 
+// function onDown(ev) {
+//     // Get the ev pos from mouse or touch
+//     const pos = getEvPos(ev)
+//     if (isTextClicked(pos, gCurrectImgId)<0) return
+//     setWordDrag(gCurrectImgId,true)
+//     // changePos(gCurrectImgId, pos)
+//     document.body.style.cursor = 'grabbing'
+// }
+
+
 function onDown(ev) {
     // Get the ev pos from mouse or touch
     const pos = getEvPos(ev)
     if (isTextClicked(pos, gCurrectImgId)<0) return
     setWordDrag(gCurrectImgId,true)
+
     changePos(gCurrectImgId, pos)
     document.body.style.cursor = 'grabbing'
 }
 
+// function onMove(ev) {
+//     const isDrag=isLineDrag(gCurrectImgId)
+//     const pos = getEvPos(ev)
+//     if (!isDrag) return
+//     const loc=getPreLocation(gCurrectImgId)
+//     const changeInPos={x:pos.x-loc.x, y:pos.y-loc.y}
+//     // distenceChange(gCurrectImgId, pos)
+//     changePos (gCurrectImgId, changeInPos)
+//     renderCanvas()
+// }
 function onMove(ev) {
     const isDrag=isLineDrag(gCurrectImgId)
     const pos = getEvPos(ev)
