@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>MEMEgUn</title>
 </head>
 <body class="main-layout" onload="onInit()">
@@ -54,18 +54,15 @@
                     <option value="Chill the winds">Chill the winds</option>
                     <option value="Wake up">Wake up</option>
                 </select>
-                <!-- <img id='impactCol' src="DESIGN/ICONS/text stroke.png" alt="impactCol"> -->
                 <p id='impactCol'>A</p>
                 <input type="color"  id="impact-pelleta" name="head value="#e66465" onchange="onCanvasFuncion('strokColor',this.value)">
                 <img id='fontCol' src="DESIGN/ICONS/paint-board-and-brush.png" alt="fontCol">
                 <input type="color"  id="font-pelleta" name="head value="#e66465" onchange="onCanvasFuncion('color',this.value)">
                 <div class="imojiCont">
-                    <!-- <img id="leftArrow" src="" alt="leftArrow"> -->
                     <h1 id="leftArrow" onclick="onEmojiSearch(1)"><</h1>
                     <h1 id="leftEmoji" onclick=onAddEmoji(this)></h1>
                     <h1 id="centerEmoji" onclick=onAddEmoji(this)></h1>
                     <h1 id="rightEmoji" onclick=onAddEmoji(this)></h1>
-                    <!-- <img id="rigthEmoji" src="" alt="centerEmoji"> -->
                     <h1 id="rightArrow" onclick="onEmojiSearch(-1)">></h1>
                     
                 </div>
@@ -82,7 +79,7 @@
     </div>
 
     <section class="aboutSec">
-        <img class="aboutImg" src="DOC/self Pic.webp" alt="self-pic">
+        <img class="aboutImg" src="img/meme-imgs (square)/self Pic.webp" alt="self-pic">
             <div class="wordAndContact">
             <h1>Red Forman</h1>
             <article> is a fictional character, one of the six main characters who appears on the American sitcom Friends (1994–2004). Created by David Crane and Marta Kauffman</article>
@@ -101,7 +98,16 @@
 
     <script src="js/utils.js"></script>
     <script src="js/storge-servise.js"></script>
-    <script src="js/memeService.js"></script>
+
+    <script src="js/serach-bar-controler.js"></script>
+    <script src="js/serach-bar-services.js"></script>
+    
+    <script src="js/gallery-services.js"></script>
+    <script src="js/gallery-controler.js"></script>
+
+    <script src="js/meme-editor-controler.js"></script>
+    <script src="js/meme-editor-services.js"></script>
+
     <script src="js/mainControler.js"></script>
 
 </body>

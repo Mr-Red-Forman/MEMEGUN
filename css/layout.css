@@ -1,0 +1,44 @@
+/* setup */
+html{
+    font-family:montserrat, Arial, Helvetica, sans-serif ;
+    font-size: 19px;
+}
+
+img{
+    width: 100%;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+/* layouts */
+.main-layout { 
+    text-align: center;
+    border: rgb(220,220,220,50%) solid 1px
+}
+
+.main-layout >*{ 
+    padding: 0 3.125em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 500px) {
+
+    html, body {
+        overflow-x:hidden;
+        height:100%;
+      }
+}
+
+
+
+
+
+
+

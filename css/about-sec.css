@@ -35,9 +35,8 @@
     position: relative;
     border-radius: 50%;
     max-width:20.125rem;
-    max-height: 23.75em;
-    width: 90%; 
-    height: inherit;
+    max-height: 15.625em;
+    width: 50vw ;
     aspect-ratio: 1/1;
     flex-shrink: 2;
 }
@@ -69,24 +68,25 @@
 .social-madia a {
     width: 40px; 
     height: 40px;
-    /* /* align-items: center; */
+    display: flex;
     justify-content: center;
+    align-items: center;
     background-color: var(--clr-header-footer);
     font-size: 1.6875em;
     margin-right:0.5625em ;
     color: #ffff;
     text-decoration: none; 
     border-radius: 25%;
-
+    padding: 0.5625em;
 }
 
 
 @media (max-width: 1060px) {
 
-    .aboutImg{
+    /* .aboutImg{
         /* max-width:60%; */
         padding: 2em;
-    }
+    } */
 
     .aboutSec{
         margin-top:4.8125em ;
@@ -95,6 +95,3 @@
     }
 
 }
-
-
-

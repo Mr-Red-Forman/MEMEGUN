@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    background-color: #ffff;
+}
+
+/* SETUP */
+
+/* VARS */
+
+
+:root{
+
+    --clr-header-footer:#ff7f00;
+    --clr-hover-on:#040a2c;
+    --clr-canvas-bgc:#1a1f3f;
+
+
+}
+
+
+/* BASE */
+
+/* typegraphy */
+
+@font-face{
+    font-family: montserrat;
+    src:url("/DESIGN/Fonts/Montserrat-Regular.ttf")
+
+}
+@font-face{
+    font-family: Montserrat - Thin;
+    src:url("/DESIGN/Fonts/Montserrat-Thin.ttf")
+
+}

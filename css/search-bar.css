@@ -1,93 +1,11 @@
-@import "css/footer-header.css";
-
-@import "css/picture-grid.css";
-@import "css/canvas-screen.css";
-@import "css/aboutSec.css";
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    border: 0;
-    background-color: #ffff;
-}
-
-/* SETUP */
-
-/* VARS */
-
-
-:root{
-
-    --clr-header-footer:#ff7f00;
-    --clr-hover-on:#040a2c;
-    --clr-canvas-bgc:#1a1f3f;
-
-
-}
-
-
-/* BASE */
-
-/* typegraphy */
-
-@font-face{
-    font-family: montserrat;
-    src:url("/DESIGN/Fonts/Montserrat-Regular.ttf")
-
-}
-@font-face{
-    font-family: Montserrat - Thin;
-    src:url("/DESIGN/Fonts/Montserrat-Thin.ttf")
-
-}
-
-
-
-/* basics */
-
-html{
-    font-family:montserrat, Arial, Helvetica, sans-serif ;
-    font-size: 19px;
-}
-
-img{
-    width: 100%;
-}
-
-p {
-    margin: 0 0 1em;
-}
-
-a, a:hover{
-    text-decoration: none;
-}
-
-/* layouts */
-.main-layout { 
-    text-align: center;
-    border: rgb(220,220,220,50%) solid 1px
-}
-
-.main-layout >*{ 
-    padding: 0 3.125em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* COMPONENTS */
-
 /* search bar */
 
 .search-option{
-    /* min-height: 6.25em; */
     display: flex; 
     justify-content: center;
     align-items: center;
     position: relative;
-    height:max-content;
-    /* max-height:7.375em ; */
-  
-    
+    height:max-content;    
 }
 .serach-text{
     border-bottom: #040a2c 2px solid;
@@ -139,12 +57,10 @@ textarea:focus, input:focus{
     align-items: center;
 }
 
-
 .fast-search h1{
     display: block;
     justify-content: center;
     margin: auto 0;
-    /* text-align: center; */
 }
 
 .moreOption{
@@ -158,10 +74,6 @@ textarea:focus, input:focus{
     z-index: 999;
 }
 
-
-
-
-
 .keyWords{
     display: flex;
     justify-content: center;
@@ -169,37 +81,6 @@ textarea:focus, input:focus{
     cursor: grab;
     font-size: 1em;
 }
-
-
-
-/* HELPERS */
-
-.flex{
-    display: flex;
-}
-
-.flex.justify-content{
-    justify-content:center;
-}
-
-.flex.align-items{
-    align-items: center;
-}
-
-.flex.flex-direction{
-    flex-direction:column;
-}
-
-.flex.space-between {
-    justify-content: space-between;
-}
-
-.clean-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
 
 @media (max-width: 1200px) {
 
@@ -211,15 +92,8 @@ textarea:focus, input:focus{
     
 }
 
+
 @media (max-width: 1080px) {
-    .canvas-container.canvasOpen{
-        flex-direction: column-reverse;
-    }
-
-    .main-canvas img {
-        width: 100%;
-    }
-
     .fast-search{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows:4em 0 0 0 0;
@@ -253,29 +127,6 @@ textarea:focus, input:focus{
         align-content: center;
         justify-content:center;
     }
-    
 }
-
-@media (max-width: 600px) {
-
-    .canvas-container.canvasOpen>*{
-        font-size: 14px;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-}
-
-
-@media (max-width: 500px) {
-
-    html, body {
-        overflow-x:hidden;
-        height:100%;
-      }
-
-}
-
-
 
 
