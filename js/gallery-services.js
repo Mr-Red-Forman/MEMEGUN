@@ -32,7 +32,7 @@ function _deafultgImgs(){
         var randomid=makeId()
         insertImg({
             id:randomid,
-            url:`"img/${i}.jpg"`,
+            url:`"img/meme-imgs (square)/${i}.jpg"`,
             keywords:[keywords[getRandomIntInt(0, keywords.length-1)],keywords[getRandomIntInt(0, keywords.length-1)]]
         })
         insertMemeInfo({
